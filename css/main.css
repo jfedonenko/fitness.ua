@@ -1,0 +1,708 @@
+/*Specification*/
+body{
+	padding: 0;
+	margin: 0;
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	color: #000;
+	line-height: 1.4em;
+}
+* {
+	box-sizing: border-box;
+}
+
+ul, li {
+	display: block;
+	padding: 0;
+	margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	padding: 0;
+	margin: 0;
+	font-weight: 700;
+}
+
+p {
+	margin: 0;
+}
+
+input, button, button:focus{
+	outline: none;
+	border: none;
+	background-color: transparent;
+	font-family: inherit;
+}
+
+button{
+	cursor: pointer;
+}
+
+img {
+	display: block;
+	object-fit: cover;
+}
+
+.container {
+	width: 1110px;
+	margin: 0 auto;
+}
+
+.container_flex{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+a{
+	text-decoration: none;
+}
+
+.btn{
+	padding: 13px 0;
+	font-size: 15px;
+	font-weight: 400;
+	color: #fff;
+	width: 200px;
+	display: block;
+	text-align: center;
+	background: #FF7629;
+	box-shadow: 0px 0px 10px rgba(111, 111, 111, 0.25);
+	border-radius: 30px;
+}
+
+.btn:hover{
+	background: #c9510e;
+}
+
+.section-title {
+	font-size: 36px;
+	color: #323232;
+	line-height: 1.4em;
+	margin-bottom: 19px;
+}
+
+.paragraph{
+	max-width: 512px;
+}
+
+/*First section*/
+.header{
+	background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../img/header-bg2.jpg') no-repeat center top / cover;
+}
+
+.nav {
+	border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.logo {
+	background: url('../img/logo.svg') no-repeat center;
+	width: 81px;
+	height: 42px;
+	display: block;
+}
+
+.menu__list {
+	display: flex;
+}
+
+.menu__item a {
+	color: #fff;
+	font-size: 16px;
+	padding: 32px 24px;
+	display: block;
+	position: relative;
+}
+
+.menu__item a::after,
+.menu__item_active a::after {
+	content:'';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 0;
+	height: 2px;
+	background-color: #fff;
+	transition: width 0.3s ease 0s;
+}
+
+.menu__item a:hover::after,
+.menu__item_active a::after {
+	width: 100%;
+	transition: width 0.3s ease 0s;
+}
+
+
+.phone{
+	font-size: 17px;
+	font-weight: 700;
+	color: #fff;
+	transition: color 0.3s ease 0s;
+}
+
+.phone:hover {
+	color: #FF7629;
+	transition: color 0.3s ease 0s;
+}
+
+.offer-wrapper {
+	padding: 142px 0 68px;
+}
+
+.offer {
+	max-width: 513px;
+	color: #fff;
+}
+
+.offer__title {
+	font-size: 48px;
+	line-height: 1.15em;
+	margin-bottom: 19px;
+}
+
+.offer__btn{
+	margin: 23px 0 168px;
+	transition: background 0.5s ease;
+}
+
+.offer__btn:hover {
+	transition: background 0.5s ease;
+}
+
+.arrow-down {
+	background: url('../img/arrow-down.svg') no-repeat center;
+	width: 16px;
+	height: 24px;
+	display: block;
+	opacity: 0.7;
+	transition: opacity 0.5s ease;
+}
+
+.arrow-down:hover{
+	opacity: 1;
+	transition: opacity 0.5s ease;
+}
+/*Second section*/
+.services {
+	padding:99px 0;
+}
+
+.services-list {
+	margin:78px 0 76px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.services-list__item {
+	max-width: 50%;
+	display: flex;
+}
+.services-list__item:nth-last-child(n+3) {
+	margin-bottom: 51px;
+}
+
+.services-list__image {
+	width: 210px;
+	height: 144px;
+	margin-right: 30px;
+}
+
+.services-list__image img {
+	border-radius: 0px 10px 10px 10px;
+	transition: box-shadow 0.5s ease;
+}
+
+.services-list__image img:hover {
+	box-shadow: 0px 0px 6px 2px #878787;
+}
+
+.services-list__wrapper {
+	font-size: 15px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.services-list__title {
+	font-size: 19px;
+	font-weight: 700;
+	margin-bottom: 15px;
+}
+
+.services-list__title a {
+	color: #000;
+}
+
+.services-list__title a:hover{
+	text-decoration: underline;
+}
+
+.services-list__price {
+	color: #FF7629;
+	margin-top: 15px;
+}
+
+.services__btn{
+	transition: background 0.5s ease;
+}
+
+.services__btn:hover{
+	transition: background 0.5s ease;
+}
+
+/*Third section*/
+
+.clubs{
+	background: #F7F6F8;
+   padding-top: 102px;
+   padding-bottom: 60px;
+}
+
+.clubs-list {
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: 89px;
+	margin-top: 75px;
+}
+
+.clubs-list__item {
+   position: relative;
+	width: 345px;
+	height: 265px;
+}
+
+.clubs-list__img {
+   height: auto;
+	max-width: 100%;
+   border-radius: 15px;
+}
+
+.clubs-list__item::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	visibility: none;
+	background: rgba(0, 0, 0, 0.7) url('../img/search-icon.svg') no-repeat center center;
+	border-radius: 15px;
+	opacity: 0;
+	transition: opacity 0.5s ease;
+}
+
+.clubs-list__item:hover::before {
+	opacity: 1;
+}
+
+.achievements {
+	border-top: 1px solid #B8B8B8;
+	padding: 46px 0 0;
+	display: flex;
+	justify-content: space-between;
+}
+
+.achievements__item {
+	width: 100px;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+}
+
+.achievements__digit {
+	font-size: 36px;
+	font-weight: 700;
+	margin-bottom: 3px;
+	display: inline-block;
+	line-height: 1.4em;
+}
+
+.all-clubs {
+	max-width: 801px;
+   padding: 47px 88px 49px 88px;
+	background: #F4EAFF;
+	border-radius: 15px;
+	text-align: center;
+	position: relative;
+   margin: 80px auto -20%;
+   z-index: 3;
+}
+.all-clubs__title {
+	font-size: 19px;
+	margin-bottom: 23px;
+}
+.all-clubs__text {
+	text-align: center;
+}
+.all-clubs__btn {
+	margin: 31px auto 0;
+	padding-bottom: 11px;
+	transition: background 0.5s ease;
+}
+
+.all-clubs__btn:hover{
+	transition: background 0.5s ease;
+}
+
+/*fourth section*/
+
+.video{
+	padding: 262px 0 140px;
+}
+
+.section-title_align{
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.video-text{
+	margin: 0 auto;
+	text-align: center;
+}
+
+.video-frame{
+	width: 830px;
+	margin: 77px auto 0;
+	padding-bottom: 61px;
+	border-bottom: 1px solid #E0E0E0;
+}
+
+.video-frame iframe{
+	width: 100%;
+	height: 426px;
+	display: block;
+	background: #000000;
+	box-shadow: 0px 0px 10px rgba(111, 111, 111, 0.25);
+	border-radius: 10px;
+}
+
+/*Footer*/
+.footer{
+	background: #F7F6F8;
+	padding: 62px 0 100px;
+}
+
+.footer-content{
+	display: flex;
+	justify-content: space-between;
+}
+
+.footer-content__title_align{
+	margin-bottom: 16px;
+}
+
+.footer-content__list {
+	margin-top: 32px;
+}
+.footer-content__list-item {
+	margin-bottom: 19px;
+	font-size: 14px;
+	display: flex;
+	align-items: center;
+}
+
+.footer-content__list-item:last-child {
+	margin-bottom: 0;
+}
+
+.footer-content__list-item a {
+	color: #000;
+	display: flex;
+	line-height: 1.59em;
+}
+
+.footer-content__icon {
+	margin-right: 17px;
+}
+
+.social{
+	margin-top: 74px;
+	display: flex;
+}
+
+.social__item {
+	margin-right: 22px;
+}
+
+.social__item:last-child{
+	margin-right: 0;
+}
+
+.social__link {
+	font-size: 14px;
+	color: #FF7629;
+	line-height: 1.59em;
+}
+
+.social__link:hover {
+	text-decoration: underline;
+}
+
+.footer-content__item_newsletter{
+	margin: auto 0;
+}
+
+.subscribe__form {
+	max-width: 385px;
+	display: flex;
+	position: relative;
+}
+
+.subscribe__input {
+	background: #FFFFFF;
+	border: 1px solid #F2F2F2;
+	box-shadow: 0px 0px 10px rgba(111, 111, 111, 0.25);
+	border-radius: 30px;
+	font-size: 13px;
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: 400;
+	width: 100%;
+	padding: 15px 70px 15px 33px;
+}
+
+.subscribe__btn {
+	width: 45px;
+	height: 45px;
+	background: #FF7629 url('../img/send.svg') no-repeat center center;
+	box-shadow: 0px 0px 10px rgba(111, 111, 111, 0.25);
+	border-radius: 100px;
+	transition: background 0.5s ease;
+	position: absolute;
+   right: 0;
+   z-index: 10;
+}
+
+.subscribe__btn:hover {
+	background: #c9510e url('../img/send.svg') no-repeat center center;
+	transition: background 0.5s ease;
+}
+
+.subscribe__policy {
+	margin-top: 23px;
+	font-size: 13px;
+}
+
+.footer-credits__text {
+	font-size: 13px;
+	display: inline-block;
+	margin-top: 35px;
+}
+
+/*  RESPONSIVE  */
+
+
+/* Large: 992px - 1199px */
+@media (max-width: 1199px) {
+	.container {
+		max-width: 960px;
+	}
+	.services-list__image {
+		margin-right: 20px;
+	}
+	.clubs-list__item {
+		width: 32%;
+		height: 100%;
+	}
+}
+
+/* Medium: 768px - 991px */
+@media (max-width: 991px) {
+	.container {
+		max-width: 720px;
+	}
+	.phone {
+		display: none;
+	}
+	.services-list {
+		display: block;
+		flex-wrap: nowrap;
+	}
+	.services-list__item {
+		max-width: 79%;
+	}
+	.services-list__item:nth-last-child(n+2) {
+		margin-bottom: 51px;
+	}
+	.clubs-list {
+		flex-wrap: wrap;
+	}
+	.clubs-list__item {
+		width: 345px;
+	}
+	.clubs-list__item:nth-last-child(n+2) {
+		margin-bottom: 28px;
+	}
+	.video {
+		padding-bottom: 100px;
+	}
+	.video-frame {
+		width: 100%;
+	}
+	.video-frame iframe {
+		height: 369px;
+	}
+	.footer-content {
+		flex-wrap: wrap;
+	}
+	.footer-content__item:nth-last-child(n+2) {
+		margin-bottom: 82px;
+		width: 50%;
+	}
+	.footer-content__item:first-of-type {
+		padding-right: 30px;
+	}
+}
+
+/* Small: 576px - 767px */
+@media (max-width: 767px) {
+	.container {
+		max-width: 540px;
+	}
+	.section-title {
+		font-size: 28px;
+	}
+	.paragraph {
+		max-width: 100%;
+	}
+	.menu {
+		display: none;
+	}
+	.phone {
+		display: block;
+		padding: 36px 0 30px;
+	}
+	.offer__title {
+		font-size: 38px;
+	}
+	.services-list__item {
+		max-width: 100%;
+	}
+	.clubs-list {
+		justify-content: center;
+	}
+	.all-clubs {
+		padding: 55px 24px;
+		margin-bottom: -42%;
+	}
+	.achievements {
+		justify-content: center;
+   	flex-wrap: wrap;
+	} 
+	.achievements__item {
+		width: 25%;
+		margin-bottom: 24px;
+	}
+	.achievements__item:nth-last-child(-n + 3) {
+		margin-bottom: 0;
+	}
+	.video {
+		padding-top: 210px;
+		width: 100%;
+	}
+	.video-frame iframe {
+		height: 231px;
+	}
+}
+
+/*  471px - 575px */
+@media (max-width: 575px) {
+	.container {
+		width: 100%;
+		padding: 0 15px;
+	}
+	.footer {
+		padding: 62px 0;
+	}
+	.footer-content {
+		flex-direction: column;
+	}
+	.footer-content__item:first-of-type {
+		padding-right: 0;
+	}
+	.footer-content__item:nth-last-child(n+2) {
+		width: 100%;
+		margin-bottom: 62px;
+	}
+	.social {
+		margin-top: 35px;
+	}
+}
+
+/* Extra small: 320px - 470px */
+@media (max-width: 470px) {
+	.container {
+		width: 100%;
+		padding: 0 15px;
+	}
+	.phone {
+		font-size: 16px;
+	}
+	.offer-wrapper {
+		padding: 75px 0 50px;
+	}
+	.offer__title {
+		font-size: 28px;
+		text-align: center;
+	}
+	.offer__intro {
+		text-align: center;
+	}
+	.offer__btn {
+		margin: 50px auto 90px;
+	}
+	.arrow-down {
+		margin: 0 auto;
+	}
+	.section-title {
+		font-size: 24px;
+		text-align: center;
+	}
+	.services {
+		padding: 60px 0;
+	}
+	.paragraph {
+		text-align: center;
+	}
+	.services-list {
+		margin: 60px 0;
+	}
+	.services-list__item {
+		flex-direction: column;
+		align-items: center;
+	}
+	.services-list__image {
+		margin-right: 0;
+	}
+	.services-list__wrapper {
+		align-items: center;
+		margin-top: 20px;
+	}
+	.services-list__text {
+		text-align: center;
+	}
+	.services__btn {
+		margin: 0 auto;
+	}
+	.clubs {
+		padding: 60px 0;
+	}
+	.clubs-list {
+		padding-bottom: 55px;
+	}
+	.clubs-list {
+		margin-top: 50px;
+	}
+	.achievements__item {
+		width: 50%;
+	}
+	.achievements__item:last-of-type {
+		margin-top: 20px;
+	}
+	.video {
+		padding: 145px 0 61px;
+	}
+}
